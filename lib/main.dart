@@ -119,14 +119,20 @@ class _TelaSomaState extends State<TelaSoma> {
 
             // -------- BOTÕES LADO A LADO --------
             // -------- BOTÕES EM 2 LINHAS --------
+            // -------- BOTÕES EM 2 LINHAS --------
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(onPressed: somar, child: const Text('Somar')),
+                ElevatedButton.icon(
+                  onPressed: somar,
+                  icon: const Icon(Icons.add),
+                  label: const Text('Somar'),
+                ),
                 const SizedBox(width: 10),
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: subtrair,
-                  child: const Text('Subtrair'),
+                  icon: const Icon(Icons.remove),
+                  label: const Text('Subtrair'),
                 ),
               ],
             ),
@@ -136,14 +142,16 @@ class _TelaSomaState extends State<TelaSoma> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: multiplicar,
-                  child: const Text('Multiplicar'),
+                  icon: const Icon(Icons.close),
+                  label: const Text('Multiplicar'),
                 ),
                 const SizedBox(width: 10),
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: dividir,
-                  child: const Text('Dividir'),
+                  icon: const Icon( Icons.horizontal_rule),
+                  label: const Text('Dividir'),
                 ),
               ],
             ),
