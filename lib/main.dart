@@ -70,14 +70,14 @@ class _TelaSomaState extends State<TelaSoma> {
     });
   }
 
-  // Dividir (com checagem de divisão por zero)
+  // Dividir
   void dividir() {
     double n1 = double.tryParse(numero1Controller.text) ?? 0;
     double n2 = double.tryParse(numero2Controller.text) ?? 0;
 
     setState(() {
       if (n2 == 0) {
-        resultado = double.nan; // ou: 0 / mostrar mensagem
+        resultado = double.nan;
       } else {
         resultado = n1 / n2;
       }
